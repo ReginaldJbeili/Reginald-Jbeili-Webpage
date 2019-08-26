@@ -4,56 +4,145 @@
     <title>My Story</title>
     <style>
     .title {
-      color: red;
-      font-size:40px;
-      font-family: sans-serif;
+      color: black;
+      font-size:30px;
+      font-family: Courier;
+    }
+    .title-major{
+      color: black;
+      font-size:25px;
+      font-family: Courier;
+    }
+    .title-minor{
+      color: black;
+      font-size:20px;
+      font-family: Courier;
     }
     .secondary-text {
       color: blue;
       font-size: 30px;
-      font-family: sans-serif;
+      font-family: verdana;
     }
     .normal-text {
         color: teal;
         font-size: 20px;
-        font-family: sans-serif;
+        font-family: verdana;
     }
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text-block-top-left {
+      position: absolute;
+      top: 1px;
+      left: 20px;
+    }
+    .text-block-middle-right {
+      position: absolute;
+      bottom: 300px;
+      right: 200px;
+    }
+    .text-block-center {
+      position: absolute;
+      bottom: 160px;
+      right: 500px;
+
+    }
+    .boxed {
+    border-style: solid;
+    border-width: thick;
+    border-color: black;
+    background-color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    }
+    .miniboxed {
+    border-style: solid;
+    border-width: thick;
+    float: left;
+    border-color: black;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 0px;
+  
+    }
+
     </style>
+
   </head>
-  <body>
-    <h1 class="title" >I'm Reginald Jbeili, you can call me "Reggie"
-      <br>...and this is my story</h1>
-    <h2 class="secondary-text">My younger years taught me many lessons in life</h2>
-    <ul class="normal-text">
-      <li>the pros and cons of being multi-cultural growing up</li>
-      <li>having a mother and father guiding me along the way</li>
-      <li>having 2 elder siblings who held my hand as I grew</li>
-      <li>and a younger sibling who's hand I held</li>
-      <li>backed by my extended family's support</li>
-    </ul>
-    <h3 class="secondary-text">And then I became employed</h3>
-      <ol class="normal-text">
+  <body bgcolor="gray">
+
+    <div>
+      <img class="center" src="Cool Pic.jpg" alt="Me and my partner on a staircase" width=60%>
+      <div class="text-block-top-left boxed">
+        <h1 class="title">Reginald Jbeili signing-on...</h1>
+        </div>
+        <div class="text-block-middle-right boxed">
+      <p class="title-major"><strong>..."Reggie"...</strong></p>
+      </div>
+      <div class="text-block-center boxed">
+        <button class="title-minor" on-click="dropBox()"><strong>...and this is my story</strong></button>
+        </div>
+
+    <script>
+    function dropBox() {
+      var x = document.getElementById("dropDown");
+      if (x.display==="none") {x.display="block"}
+      else {x.display="none"}
+      return x;
+    }
+    </script>
+
+    <div id="dropDown"class="miniboxed">
+      <h2 class="secondary-text">My younger years</h2>
+      <p class="normal-text">Being multi-cultural (Lebanese and Filipino descent)
+      <br>while being surrounded and guided by friends and family
+      <br>led me to various experiences in life.</p>
+      <p class="normal-text"> I was employed:</p>
+        <ul class="normal-text">
         <li>as a call center agent</li>
         <li>as an English tutor</li>
         <li>as a game tester</li>
-        <li>as an operating theatre nurse</li>
-      </ol>
+        <li>as a nurse</li>
+      </ul>
+    </div>
 
-    <h4 class="secondary-text">Now in my late 20s, I realised something</h4>
+
+    <div class="miniboxed">
+      <h3 class="secondary-text">Now in my late 20s, I realised something</h3>
       <p class="normal-text">I've always felt like the path I've been walking was never mine,
       <br>that I've went left instead of going right.
       <br>I appreciated everything (education as a nurse fully paid by parents and relatives),
       <br><em>but it was never my calling.</em>
+      <br>Being a nurse here in the UK for 5 years taught me many things
+      <br>but an important one that stuck with
+      <br>is that it's okay to follow your passions
       <br>As I started learning what it meant to be a programmer,
       <br><strong>I felt like I was a cube being taken away from a cylinder and finally fitting into a square.</strong></p>
-    <h5 class="secondary-text">The reason I'm applying for this programme is:</h5>
+    </div>
+    <img name="slide" class="center"width="400" height "800">
+      <script>
+      var i = 0;
+      var images = ["Nerd Pic.jpg","Snow Pic.jpg","Vaccination Missioned.jpg"];
+
+      function autoSlide () {
+        document.slide.src=images[i];
+        if (i<images.length-1) {i++}
+        else {i=0}
+        setTimeout("autoSlide()",2500);
+      }
+
+      window.onload = autoSlide;
+      </script>
+    <h4 class="secondary-text">The reason I'm applying for this programme is:</h4>
       <p class="normal-text">With the support of my partner and my loved ones,
       <br>
       <br>I think it's time for me to fork this path I'm currently on and finally chase my dream
       <br> and this website for Founders and Coders is my first step towards achieving it.
       <br>
       <br>Here's the link to my Github Repository: <a href="https://github.com/ReginaldJbeili/Reginald-Jbeili-Webpage">Reginald Jbeili - Github </a></p>
-    <h6 class="secondary-text">To see more about my progress:</h6>
+    <h5 class="secondary-text">To see more about my progress:</h5>
     <ul class="normal-text">
       <li>Check out how I've been doing with HTML,CSS, and Javascript on freeCodeCamp:<a href="https://www.freecodecamp.org/reginaldjbeili">Reginald Jbeili - freeCodeCamp </a> </li>
       <li>And how I've fared with Javascript in Codewars:<a href="https://www.codewars.com/users/reginaldjbeili">Reginald Jbeili - Codewars </a> </li>
