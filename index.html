@@ -1,151 +1,124 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Story</title>
-    <style>
-    .title {
-      color: black;
-      font-size:30px;
-      font-family: Courier;
-    }
-    .title-major{
-      color: black;
-      font-size:25px;
-      font-family: Courier;
-    }
-    .title-minor{
-      color: black;
-      font-size:20px;
-      font-family: Courier;
-    }
-    .secondary-text {
-      color: blue;
-      font-size: 30px;
-      font-family: verdana;
-    }
-    .normal-text {
-        color: teal;
-        font-size: 20px;
-        font-family: verdana;
-    }
-    .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .text-block-top-left {
-      position: absolute;
-      top: 1px;
-      left: 20px;
-    }
-    .text-block-middle-right {
-      position: absolute;
-      bottom: 300px;
-      right: 200px;
-    }
-    .text-block-center {
-      position: absolute;
-      bottom: 160px;
-      right: 500px;
-
-    }
-    .boxed {
-    border-style: solid;
-    border-width: thick;
-    border-color: black;
-    background-color: white;
-    padding-left: 50px;
-    padding-right: 50px;
-    }
-    .miniboxed {
-    border-style: solid;
-    border-width: thick;
-    float: left;
-    border-color: black;
-    background-color: white;
-    padding-left: 20px;
-    padding-right: 0px;
-
-    }
-
-    </style>
-
+<link rel = "stylesheet" type = "text/css" href = "StyleSheet.css" />
+<link rel ="stylesheet" type="text/css" href = "https://fonts.googleapis.com/css?family=Bangers|Lacquer|Permanent+Marker&display=swap"/>
   </head>
   <body bgcolor="gray">
-
-    <div>
-      <img class="center" src="Cool Pic.jpg" alt="Me and my partner on a staircase" width=60%>
+  <div class="flexing">
+  <div class ="headerbox">
+  <div class="img"><a href="https://github.com/ReginaldJbeili/Reginald-Jbeili-Webpage"><img src="Github.png" height=50 width=50> </a>
+  <a href="https://www.freecodecamp.org/reginaldjbeili"><img src="freeCodeCamp.png" height=50 width=50> </a>
+  <a href="https://www.codewars.com/users/reginaldjbeili"><img src="Codewars.jpg" height=50 width=50> </a>
+</div>
+<p class="title"><strong><em> My Founders and Coders Application </em></strong></p>
+  </div>
+<div class="center">
+      <img src="Snow Pic.jpg" width=500>
       <div class="text-block-top-left boxed">
-        <h1 class="title">Reginald Jbeili signing-on...</h1>
+        <h1 class="title-minor">Reginald Jbeili is signing-on...</h1>
         </div>
         <div class="text-block-middle-right boxed">
-      <p class="title-major"><strong>..."Reggie"...</strong></p>
+      <p class="title-minor"><strong>...you can call me "Reggie"...</strong></p>
       </div>
       <div class="text-block-center boxed">
-        <button class="title-minor" on-click="dropBox()"><strong>...and this is my story</strong></button>
+        <button class="title-minor" onclick="dropBox()"><strong>...and this is my story</strong></button>
         </div>
+      </div>
+      <div id="dropDown" style="display:none;">
+      <div class="miniboxed1">
+        <h2 class="secondary-text">My younger years</h2>
+        <p class="normal-text"><strong>Being multi-cultural (Lebanese and Filipino descent)
+        <br>while being surrounded and guided by friends and family
+        <br>led me to various experiences in life.</strong></p>
+        <p class="normal-text"> I was employed:</p>
+          <ul class="normal-text">
+          <li>as a call center agent</li>
+          <li>as an English tutor</li>
+          <li>as a game tester</li>
+          <li>as a nurse</li>
+        </ul>
+      </div>
 
+      <div class="miniboxed2">
+        <h3 class="secondary-text">Now in my late 20s, I realised something</h3>
+        <p class="normal-text"><strong>I've always felt like the path I've been walking was never mine,
+        <br>that I've went left instead of going right.
+        <br>I appreciated everything (education as a nurse fully paid by parents and relatives),
+        <br><em>but it was never my calling.</em></strong>
+        <br>Being a nurse here in the UK for 5 years taught me many things
+        <br>but an important one that stuck with
+        <br>is that it's okay to follow your passions
+        <br>As I started learning what it meant to be a programmer,
+        <br><strong>I felt like I was a cube being taken away from a cylinder and finally fitting into a square.</strong></p>
+      </div>
+      <div class="miniboxed1">
+        <h4 class="secondary-text">The reason I'm applying for this programme is:</h4>
+        <p class="normal-text">With the support of my partner and my loved ones,
+        <br>
+        <strong><br>I think it's time for me to fork this path I'm currently on and finally chase my dream
+        <br> and this website for Founders and Coders is my first step towards achieving it.</strong>
+        <br>
+        <br>Here's the link to my Github Repository: <a href="https://github.com/ReginaldJbeili/Reginald-Jbeili-Webpage">Reginald Jbeili - Github </a></p>
+      </div>
+      <div class="miniboxed2">
+      <h5 class="secondary-text">To see more about my progress:</h5>
+      <ul class="normal-text">
+        <li>Check out how I've been doing with HTML,CSS, and Javascript on freeCodeCamp:<a href="https://www.freecodecamp.org/reginaldjbeili">Reginald Jbeili - freeCodeCamp </a> </li>
+        <li>And how I've fared with Javascript in Codewars:<a href="https://www.codewars.com/users/reginaldjbeili">Reginald Jbeili - Codewars </a> </li>
+      </ul>
+      </div>
+    </div>
     <script>
     function dropBox() {
-      var x = document.getElementById("dropDown");
-      if (x.display==="none") {x.display="block"}
-      else {x.display="none"}
-      return x;
+      var click = document.getElementById("dropDown");
+      if (click.style.display=="none") {
+        click.style.display="block"}
+        else {click.style.display="none"}
     }
     </script>
 
-    <div id="dropDown"class="miniboxed">
-      <h2 class="secondary-text">My younger years</h2>
-      <p class="normal-text">Being multi-cultural (Lebanese and Filipino descent)
-      <br>while being surrounded and guided by friends and family
-      <br>led me to various experiences in life.</p>
-      <p class="normal-text"> I was employed:</p>
-        <ul class="normal-text">
-        <li>as a call center agent</li>
-        <li>as an English tutor</li>
-        <li>as a game tester</li>
-        <li>as a nurse</li>
-      </ul>
-    </div>
 
 
-    <div class="miniboxed">
-      <h3 class="secondary-text">Now in my late 20s, I realised something</h3>
-      <p class="normal-text">I've always felt like the path I've been walking was never mine,
-      <br>that I've went left instead of going right.
-      <br>I appreciated everything (education as a nurse fully paid by parents and relatives),
-      <br><em>but it was never my calling.</em>
-      <br>Being a nurse here in the UK for 5 years taught me many things
-      <br>but an important one that stuck with
-      <br>is that it's okay to follow your passions
-      <br>As I started learning what it meant to be a programmer,
-      <br><strong>I felt like I was a cube being taken away from a cylinder and finally fitting into a square.</strong></p>
-    </div>
-    <img name="slide" class="center" width="400" height "800">
-      <script>
-      var i = 0;
-      var images = ["Nerd Pic.jpg","Snow Pic.jpg","Mission Pic.jpg"];
+  <img name="slide" class="img-center" width="400" height "800">
 
-      function autoSlide () {
-        document.slide.src=images[i];
-        if (i<images.length-1) {i++}
-        else {i=0}
-        setTimeout("autoSlide()",2500);
-      }
+  <button onclick="leftButton()"> < </button>
+  <button onclick="rightButton()"> > </button>
+  <button onClick="autoSlideStop()">PauseMe</button>
+  <button onClick="autoSlide">PlayMe</button>
 
-      window.onload = autoSlide;
-      </script>
-    <h4 class="secondary-text">The reason I'm applying for this programme is:</h4>
-      <p class="normal-text">With the support of my partner and my loved ones,
-      <br>
-      <br>I think it's time for me to fork this path I'm currently on and finally chase my dream
-      <br> and this website for Founders and Coders is my first step towards achieving it.
-      <br>
-      <br>Here's the link to my Github Repository: <a href="https://github.com/ReginaldJbeili/Reginald-Jbeili-Webpage">Reginald Jbeili - Github </a></p>
-    <h5 class="secondary-text">To see more about my progress:</h5>
-    <ul class="normal-text">
-      <li>Check out how I've been doing with HTML,CSS, and Javascript on freeCodeCamp:<a href="https://www.freecodecamp.org/reginaldjbeili">Reginald Jbeili - freeCodeCamp </a> </li>
-      <li>And how I've fared with Javascript in Codewars:<a href="https://www.codewars.com/users/reginaldjbeili">Reginald Jbeili - Codewars </a> </li>
-    </ul>
+
+    <script>
+    var i = 0;
+    var images = ["Nerd Pic.jpg","Mission Pic.jpg","Chill Pic.jpg"];
+
+    function autoSlide () {
+      document.slide.src=images[i];
+      if (i<images.length-1) {i++}
+      else {i=0}
+      setTimeout("autoSlide()",2500);
+}
+function autoSlideStop () {
+  document.slide.src=images[i];
+  if (i<images.length-1) {i++}
+  else {i=0}
+  setTimeout("autoSlide()",100000);
+}
+
+    window.onload = autoSlide;
+
+    function rightButton() {
+      if (i<images.length-1) {i++}
+      else {i=0}
+    }
+    function leftButton() {
+      if (i>images.length-1) {i--}
+      else {i=images.length-1}
+    }
+
+    window.onload = autoSlide;
+
+    </script>
+  </div>
   </body>
 </html>

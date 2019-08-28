@@ -1,0 +1,100 @@
+
+.title {
+  color: black;
+  font-size:50px;
+  display: inline;
+  font-family: "Bangers";
+}
+
+.title-minor{
+  color: black;
+  font-size:30px;
+  font-family: "Permanent Marker";
+}
+.secondary-text {
+  color: black;
+  font-size: 30px;
+  font-family: "Lacquer";
+}
+.normal-text {
+    color: black;
+    font-size: 20px;
+    font-family: Courier;
+}
+.center {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.text-block-top-left {
+  position: absolute;
+  top:20px;
+  left:20px;
+}
+.text-block-middle-right {
+  position: absolute;
+  top: 200px;
+  right: 10px;
+}
+.text-block-center {
+  position: absolute;
+  bottom: 0px;
+  right: 450px;
+
+}
+.boxed {
+border-style: solid;
+border-width: thick;
+border-color: black;
+background-color: white;
+padding-left: 50px;
+padding-right: 50px;
+}
+.miniboxed1 {
+border-style: solid;
+border-width: thick;
+float: left;
+border-color: black;
+background-color: white;
+padding-left: 20px;
+padding-right: 0px;
+display: block;
+}
+.miniboxed2 {
+border-style: solid;
+border-width: thick;
+float: right;
+border-color: black;
+background-color: white;
+padding-left: 20px;
+padding-right: 0px;
+display: block;
+}
+.headerbox {
+  position: relative;
+  border-style: solid;
+  border-width: thick;
+  border-color: black;
+  background-color: white;
+  display:block;
+  margin-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.img {
+  float:left;
+}
+
+.flexing {
+  display: flex;
+  flex-direction: column;
+}
