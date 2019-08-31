@@ -5,7 +5,6 @@
 <link rel ="stylesheet" type="text/css" href = "https://fonts.googleapis.com/css?family=Bangers|Lacquer|Permanent+Marker&display=swap"/>
   </head>
   <body bgcolor="gray">
-  <div class="flexing">
   <div class ="headerbox">
   <div class="img"><a href="https://github.com/ReginaldJbeili/Reginald-Jbeili-Webpage"><img src="Github.png" height=50 width=50> </a>
   <a href="https://www.freecodecamp.org/reginaldjbeili"><img src="freeCodeCamp.png" height=50 width=50> </a>
@@ -14,7 +13,7 @@
 <p class="title"><strong><em> My Founders and Coders Application </em></strong></p>
   </div>
 <div class="center">
-      <img src="Snow Pic.jpg" width=500>
+      <img src="Snow Pic.jpg" width=40% border="5">
       <div class="text-block-top-left boxed">
         <h1 class="title-minor">Reginald Jbeili is signing-on...</h1>
         </div>
@@ -80,45 +79,43 @@
 
 
 
-  <img name="slide" class="img-center" width="400" height "800">
+  <img name="slide" class="img-center" width=40% border="5">
 
-  <button onclick="leftButton()"> < </button>
-  <button onclick="rightButton()"> > </button>
-  <button onClick="autoSlideStop()">PauseMe</button>
-  <button onClick="autoSlide">PlayMe</button>
-
+<div class="headerbox-wrapped">
+  <button onclick="changeImage(-1)"><img src="Arrow Left.png" width="100" height "100"> </button>
+  <button onClick="autoSlide()"><img src="Play.jpg" width="100" height "100"></button>
+  <button onClick="autoSlideStop()"><img src="Pause.png" width="100" height "100"></button>
+  <button onclick="changeImage(1)"> <img src="Arrow Right.png" width="100" height "100"> </button>
+</div>
 
     <script>
     var i = 0;
     var images = ["Nerd Pic.jpg","Mission Pic.jpg","Chill Pic.jpg"];
 
-    function autoSlide () {
-      document.slide.src=images[i];
-      if (i<images.length-1) {i++}
-      else {i=0}
-      setTimeout("autoSlide()",2500);
-}
-function autoSlideStop () {
-  document.slide.src=images[i];
-  if (i<images.length-1) {i++}
-  else {i=0}
-  setTimeout("autoSlide()",100000);
+  window.onload=document.slide.src=images[i]
+
+  addEventListener("keydown", function(event) {
+    if (event.keyCode == 37){changeImage(-1)}
+  });
+
+  addEventListener("keydown", function(event) {
+    if (event.keyCode == 39){changeImage(1)}
+  });
+
+    function autoSlide() {
+      t=setInterval("changeImage(1)",2000);
 }
 
-    window.onload = autoSlide;
-
-    function rightButton() {
-      if (i<images.length-1) {i++}
-      else {i=0}
-    }
-    function leftButton() {
-      if (i>images.length-1) {i--}
-      else {i=images.length-1}
+    function changeImage(num) {
+        i = i+num;
+        if (i>images.length-1) {i=0}
+        else if (i<0) {i=images.length-1}
+        document.slide.src=images[i]
     }
 
-    window.onload = autoSlide;
-
+function autoSlideStop() {
+    clearInterval(t);
+}
     </script>
-  </div>
   </body>
 </html>

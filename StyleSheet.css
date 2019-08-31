@@ -33,6 +33,7 @@
 }
 .text-block-top-left {
   position: absolute;
+  float left;
   top:20px;
   left:20px;
 }
@@ -82,7 +83,6 @@ display: block;
   border-color: black;
   background-color: white;
   display:block;
-  margin-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 50px;
@@ -97,4 +97,23 @@ display: block;
 .flexing {
   display: flex;
   flex-direction: column;
+}
+
+.imgwrap {
+  border-style: solid;
+  border-width:thick;
+  border-color:black;
+}
+.headerbox-wrapped {
+  position: relative;
+  border-style: solid;
+  border-width: thick;
+  border-color: black;
+  background-color: white;
+  display:block;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
 }
